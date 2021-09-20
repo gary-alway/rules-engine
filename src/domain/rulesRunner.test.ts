@@ -4,12 +4,12 @@ import {
   testProductRule
 } from '../../test/testFactories'
 import { testRulesService } from '../../test/testRulesService'
-import * as rulesService from '../service/rulesService'
+import * as rulesService from '../service/getServices'
 import { executeRulesForProduct } from './rulesRunner'
 
 const getRules = jest.fn()
 jest
-  .spyOn(rulesService, 'rulesServiceFactory')
+  .spyOn(rulesService, 'getRulesService')
   .mockImplementation(() => testRulesService({ getRules }))
 
 const product = testProduct({ id: '1' })
