@@ -17,8 +17,16 @@ yarn local:down
 
 ## Testing
 
+### Acceptance tests
+
 ```bash
 yarn dev
 
+yarn test:acceptance
+```
+
+### Unit tests
+
+```bash
 yarn test
 ```
