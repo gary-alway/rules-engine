@@ -11,6 +11,7 @@ const createConditionPermutations = (
   inclusions: Condition[],
   exclusions: Condition[]
 ): Condition[] => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return inclusions.reduce((acc: any[], curr) => {
     return [...acc, { all: [curr, ...exclusions] }]
   }, [])

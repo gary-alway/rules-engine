@@ -33,8 +33,8 @@ export const testProductRule = (
   id: datatype.uuid(),
   name: lorem.words(2),
   inclusions: {
-    id: datatype.uuid(),
-    name: lorem.word()
+    id: [datatype.uuid()],
+    name: [lorem.word()]
   },
   exclusions: {
     categories: lorem.words(10).split(' ')
