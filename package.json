@@ -1,0 +1,39 @@
+{
+  "name": "rules-engine",
+  "version": "1.0.0",
+  "repository": "https://github.com/garydouglasalway/rules-engine.git",
+  "author": "Gary Alway",
+  "license": "MIT",
+  "scripts": {
+    "local:up": "make -C ./infra up",
+    "local:down": "make -C ./infra down",
+    "format": "prettier src --write",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --project tsconfig.json",
+    "dev": "serverless offline start --noPrependStageInUrl",
+    "lint": "eslint .",
+    "purge": "ts-node --files --project tsconfig.json test/purge.cmd",
+    "test": "jest ./src --coverage",
+    "test:acceptance": "jest ./test"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.991.0",
+    "json-rules-engine": "^6.1.2",
+    "ramda": "^0.27.1"
+  },
+  "devDependencies": {
+    "@types/faker": "^5.5.8",
+    "@types/jest": "^27.0.1",
+    "@types/json-rules-engine": "^4.1.0",
+    "@types/node": "^16.9.4",
+    "@types/ramda": "^0.27.44",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "faker": "^5.5.3",
+    "jest": "^27.2.0",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.3"
+  }
+}
