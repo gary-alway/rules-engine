@@ -14,7 +14,7 @@
                 </mxCell>
                 <mxCell id="178" value="CRUD operations" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#000000;labelBackgroundColor=none;" parent="68" vertex="1" connectable="0">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint as="offset"/>
+                        <mxPoint y="7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="187" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;startArrow=none;startFill=0;strokeColor=#000000;" parent="1" source="4" target="11" edge="1">
@@ -24,9 +24,9 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="188" value="Execute rule for Subject" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#000000;" parent="187" vertex="1" connectable="0">
+                <mxCell id="188" value="Execute rule for Product" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#000000;" parent="187" vertex="1" connectable="0">
                     <mxGeometry x="-0.3143" relative="1" as="geometry">
-                        <mxPoint x="15" y="35" as="offset"/>
+                        <mxPoint y="39" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="4" value="&lt;font color=&quot;#000000&quot;&gt;Rules Engine API&lt;/font&gt;" style="points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#945DF2;gradientDirection=north;fillColor=#5A30B5;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;" parent="1" vertex="1">
@@ -42,7 +42,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="200" value="Entity&lt;br&gt;updated / created" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#000000;" parent="199" vertex="1" connectable="0">
+                <mxCell id="200" value="Product&lt;br&gt;updated / created" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#000000;" parent="199" vertex="1" connectable="0">
                     <mxGeometry x="0.2525" y="-1" relative="1" as="geometry">
                         <mxPoint x="-21" y="-1" as="offset"/>
                     </mxGeometry>
@@ -64,7 +64,7 @@
                 <mxCell id="207" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;strokeColor=#000000;" parent="1" source="183" target="174" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="208" value="Entity rule&lt;br&gt;outcome" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#000000;" parent="207" vertex="1" connectable="0">
+                <mxCell id="208" value="Product rule&lt;br&gt;outcome" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#000000;" parent="207" vertex="1" connectable="0">
                     <mxGeometry x="-0.3194" relative="1" as="geometry">
                         <mxPoint y="-2" as="offset"/>
                     </mxGeometry>
@@ -83,7 +83,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="206" value="Entity rule&lt;br&gt;outcome" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#000000;" parent="205" vertex="1" connectable="0">
+                <mxCell id="206" value="Product rule&lt;br&gt;outcome" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#000000;" parent="205" vertex="1" connectable="0">
                     <mxGeometry x="-0.1597" y="2" relative="1" as="geometry">
                         <mxPoint y="-3" as="offset"/>
                     </mxGeometry>
