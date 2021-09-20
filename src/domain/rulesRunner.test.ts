@@ -3,14 +3,7 @@ import {
   testProduct,
   testProductRule
 } from '../../test/testFactories'
-import { testRulesService } from '../../test/testRulesService'
-import * as rulesService from '../service/getServices'
 import { executeRulesForProduct } from './rulesRunner'
-
-const getRules = jest.fn()
-jest
-  .spyOn(rulesService, 'getRulesService')
-  .mockImplementation(() => testRulesService({ getRules }))
 
 const product = testProduct({ id: '1' })
 const rule1 = testProductRule({ inclusions: { id: ['1'] } })
@@ -20,8 +13,12 @@ const rule4 = testProductRule({ inclusions: { id: ['3'] } })
 
 describe('rules runner', () => {
   it('executes the rules for a product returning the outcomes', async () => {
-    getRules.mockResolvedValueOnce([rule1, rule2, rule3, rule4])
-    const outcome = await executeRulesForProduct(product)
+    const outcome = await executeRulesForProduct(product, [
+      rule1,
+      rule2,
+      rule3,
+      rule4
+    ])
 
     expect(outcome).toEqual({
       productId: '1',
@@ -33,13 +30,16 @@ describe('rules runner', () => {
   })
 
   it('executes the rules for a product returning the outcomes and inactive outcomes from a previous execution', async () => {
-    getRules.mockResolvedValueOnce([rule1, rule2, rule3, rule4])
     const previousAction1 = testOutcomeAction({ ruleId: rule1.id })
     const previousAction2 = testOutcomeAction({ ruleId: rule2.id })
     const previousAction4 = testOutcomeAction({ ruleId: rule4.id })
     const previousOutcomes = [previousAction1, previousAction2, previousAction4]
 
-    const outcome = await executeRulesForProduct(product, previousOutcomes)
+    const outcome = await executeRulesForProduct(
+      product,
+      [rule1, rule2, rule3, rule4],
+      previousOutcomes
+    )
 
     expect(outcome).toEqual({
       productId: '1',

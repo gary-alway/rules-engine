@@ -5,19 +5,13 @@
   "author": "Gary Alway",
   "license": "MIT",
   "scripts": {
-    "local:up": "make -C ./infra up",
-    "local:down": "make -C ./infra down",
     "format": "prettier src --write",
     "typecheck": "tsc --noEmit",
     "build": "tsc --project tsconfig.json",
-    "dev": "serverless offline start --noPrependStageInUrl",
     "lint": "eslint .",
-    "purge": "ts-node --files --project tsconfig.json test/purge.cmd",
-    "test": "jest ./src --coverage",
-    "test:acceptance": "jest ./test"
+    "test": "jest ./src --coverage"
   },
   "dependencies": {
-    "aws-sdk": "^2.991.0",
     "json-rules-engine": "^6.1.2",
     "ramda": "^0.27.1"
   },

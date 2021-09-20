@@ -1,31 +1,8 @@
 # rules engine
 
-Product rules engine
+Product rules engine - apply inclusion and exclusion rules against a product to yield custom outcome actions against a series of products
 
-## Environment setup
-
-```bash
-yarn local:up
-```
-
-![architecture](./design/architecture.svg)
-
-```bash
-# tear down localstack docker container
-yarn local:down
-```
-
-## Testing
-
-### Acceptance tests
-
-```bash
-yarn dev
-
-yarn test:acceptance
-```
-
-### Unit tests
+## Unit tests
 
 ```bash
 yarn test

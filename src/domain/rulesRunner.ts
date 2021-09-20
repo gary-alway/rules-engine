@@ -1,15 +1,15 @@
 import { Engine } from 'json-rules-engine'
-import { getRulesService } from '../service/getServices'
 import { truthy } from '../utils/truthy'
 import { createProductRule } from './rulesEngine'
 
 export const executeRulesForProduct = async (
   product: Product,
+  productRules: ProductRule[],
   previousActions?: OutcomeAction[]
 ): Promise<Outcome> => {
   const engine = new Engine()
 
-  const rules = (await getRulesService().getRules()).map(createProductRule)
+  const rules = productRules.map(createProductRule)
 
   rules.forEach(rule => engine.addRule(rule))
 

@@ -4,6 +4,5 @@ module.exports = {
   roots: ['<rootDir>/src', '<rootDir>/test'],
   coverageDirectory: './coverage',
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
-  coveragePathIgnorePatterns: ['clients/*'],
   maxWorkers: 2
 }
