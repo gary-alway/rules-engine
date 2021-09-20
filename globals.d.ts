@@ -26,11 +26,18 @@ declare type RuleAction = {
   linkAction?: LinkedProductAction
 }
 
+declare type Criteria = Partial<
+  Record<
+    keyof Omit<Product, 'price' | 'metadata' | 'desc' | 'creatorType'>,
+    string[]
+  >
+>
+
 declare type ProductRule = {
   id?: string
   name: string
-  inclusions: Partial<Product>
-  exclusions: Partial<Product>
+  inclusions: Criteria
+  exclusions: Criteria
   temporal?: {
     start: number
     end: number | 'onwards'
@@ -38,7 +45,10 @@ declare type ProductRule = {
   action: RuleAction
 }
 
-declare type OutcomeAction = RuleAction & { active: boolean }
+declare type OutcomeAction = RuleAction & {
+  active: boolean
+  ruleId: string
+}
 
 declare type Outcome = {
   productId: string

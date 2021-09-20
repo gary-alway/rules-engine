@@ -48,6 +48,7 @@ export const testOutcomeAction = (
 ): OutcomeAction => ({
   ...testRuleAction(),
   active: true,
+  ruleId: datatype.uuid(),
   ...overrides
 })
 
